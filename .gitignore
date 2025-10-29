@@ -1,0 +1,22 @@
+# Neovim Cache & Dependencies
+/lua/lazy-lock.json
+/plugin/packer_compiled.lua
+/after/plugin/treesitter.lua
+
+# Common editor/OS files
+.DS_Store
+*.swp
+*.bak
+.cache
+
+# LazyVim cache
+.config/nvim/lazy
+
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
