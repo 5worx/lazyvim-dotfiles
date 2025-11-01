@@ -15,3 +15,14 @@ vim.api.nvim_create_autocmd("FocusLost", {
   end,
   desc = "Save file on FocusLost",
 })
+
+-- Verschiebt den NvimTree nach rechts beim Start
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    -- Nur ausführen, wenn der NvimTree offen ist
+    if vim.fn.bufname("%") == "NvimTree" then
+      -- Erzwinge, dass das aktuelle Fenster (NvimTree) nach rechts verschoben wird
+      vim.cmd("wincmd L")
+    end
+  end,
+})
